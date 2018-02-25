@@ -33,4 +33,13 @@ public class CreateFileIO {
 		}
 	}
 
+	public void deleteFile(String fileName) throws IOException {
+		File file = new File(System.getProperty("user.dir"), fileName);
+		if (file.delete()) {
+			System.out.println(file.getName() + " is deleted!");
+		} else {
+			System.out.println("Delete operation is failed.");
+		}
+	}
+
 }

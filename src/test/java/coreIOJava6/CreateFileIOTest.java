@@ -23,13 +23,19 @@ public class CreateFileIOTest {
 
 	@Test
 	public void createNewFileUsingFileSeparatorTest() throws IOException {
-		String filename = "newfile.txt";
+		String filename = "newfile.txt";//use src/test/resources/newfile.txt to create a test class
 		sut.createNewFileUsingFileSeparator(filename);
 	}
-	
+
 	@Test
 	public void createNewFileUsingNewFileConstructorTest() throws IOException {
 		String filename = "newfile.txt";
 		sut.createNewFileUsingNewFileConstructor(filename);
+	}
+
+	@Test
+	public void deleteFileTest() throws IOException {
+		String filename = "newfile.txt";
+		sut.deleteFile(filename);
 	}
 }

@@ -16,6 +16,12 @@ public class WriteFileIOTest {
 	@Test
 	public void writingFileUsingBufferedInputStreamTest() throws IOException {
 		String filename = "newfile.txt";
-		sut.writingFileUsingBufferedInputStream(filename);
+		sut.writingFileUsingFileOutputStream(filename);
+	}
+
+	@Test
+	public void writingFileUsingBufferedWriterTest() throws IOException {
+		String filename = "newfile.txt";
+		sut.writingFileUsingBufferedWriter(filename);
 	}
 }
